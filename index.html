@@ -16,7 +16,7 @@
         color: #fff;
       }
       #author {
-        margin: 10px auto;
+        text-align: center;
       }
     </style>
   </head>
@@ -49,9 +49,22 @@
         <td>Zombie</td>
       </tr>
     </table>
+    <div id="timer"></div>
     </div>
     <div id="author">
       <p>Handcoded by Rizwan and Ali</p>
     </div>
+    <script>
+      var timer = document.getElementById("timer");
+      var i = 0;
+      var interval = setInterval(function(){
+          document.getElementById("timer").innerHTML = i;
+          i++;
+          if(i === 40){
+            clearInterval(interval);
+            document.getElementsByTagName(table).innerHTML = "";
+          }
+      }, 1000);
+    </script>
   </body>
 </html>
